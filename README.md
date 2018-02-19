@@ -1,9 +1,5 @@
 # Android Studio Settings
 
-## Live Templates Commands
-
-
-
 ## Templates
 
 #### Windows
