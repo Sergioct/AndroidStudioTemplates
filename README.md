@@ -1,4 +1,4 @@
-# Android Studio Settings
+# Android Studio Templates
 
 ## Templates
 
