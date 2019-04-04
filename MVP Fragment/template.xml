@@ -1,7 +1,7 @@
 <template format="4"
     revision="1"
-    name="MVP Fragment"
-    description="Creates a new MVP Fragment classes - Presenter, View and Contract between the two">
+    name="Fragment Feature"
+    description="Creates a new MVP Fragment kotlin classes - Presenter, View and Contract between the two">
     
     <category value="MVP" />
     <formfactor value="Mobile" />

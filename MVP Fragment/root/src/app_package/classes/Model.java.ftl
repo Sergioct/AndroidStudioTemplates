@@ -14,13 +14,8 @@ import javax.inject.Inject;
  *
  */
   
-public class ${modelName}{
+class ${modelName} : ViewModel(){
     
-    private Context mContext;
-
-    @Inject
-    public ${modelName}(Context context) {
-        this.mContext = context;
-    }
+    
 
 }

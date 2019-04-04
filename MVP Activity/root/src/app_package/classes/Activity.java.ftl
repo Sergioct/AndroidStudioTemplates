@@ -14,28 +14,22 @@ import javax.inject.Inject;
  *
  */
 
-public class ${activityName} extends BaseActivity {
+public class ${activityName} extends BaseActivity, ${contractName}.View {
  
-    @Inject
-    ${contractName}.Presenter mPresenter;
+    override val layoutId: Int = R.layout.${activityLayoutName}
+    override val toolbarView: Toolbar
+        get() = toolbar
+
+    private val mPresenter: ${presenterName} by inject(parameterOf(this))
     
-    @Override
-    protected void onCreate(final Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.${activityLayoutName});
+        loadViews()
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        mPresenter.start();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        mPresenter.stop();
+    fun loadViews(){
+    
     }
     
 }

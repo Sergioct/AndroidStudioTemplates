@@ -23,25 +23,27 @@ public class ${appName}Application extends Application {
         return (${appName}Application)activity.getApplication();
     }
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
+    override fun onCreate() {
+        super.onCreate()
 
-        // Init Jodatime
-        JodaTimeAndroid.init(this);
+        AppEventsLogger.activateApp(this)
 
-        // Init dagger
+        initKoin()
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
+    }
 
-        appComponent = DaggerAppComponent.builder()
-                .appModule(new AppModule(this))
-                //.dbModule(new DbModule(this))
-                .networkModule(new NetworkModule("https://jsonplaceholder.typicode.com"))
-                .build();
-
-        apiControllerRetrofit = appComponent.getApiControllerRetrofit();
-        picasso = appComponent.getPicasso();
-        db = appComponent.getMyRoomDatabase();
-
+    private fun initKoin() {
+        startKoin {
+            androidLogger()
+            androidContext(this@SonApplication)
+            // androidFileProperties()
+            modules(
+                listOf(
+                    appModule,
+                    managerModule
+                )
+            )
+        }
     }
 
 }

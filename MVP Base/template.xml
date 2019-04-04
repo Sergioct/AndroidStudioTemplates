@@ -1,7 +1,7 @@
 <template format="4"
     revision="1"
-    name="MVP Base"
-    description="Creates MVP Base project">
+    name="Base classes"
+    description="Creates MVP Base project kotlin classes">
     
     <category value="MVP" />
     <formfactor value="Mobile" />

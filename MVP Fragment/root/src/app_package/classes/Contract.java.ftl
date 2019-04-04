@@ -11,13 +11,13 @@ package ${packageName};
  *
  */
   
-public interface ${contractName}{
+interface ${contractName}{
     
-    interface View extends BaseContract.View {
+    interface View : BaseContract.View {
  
     }
  
-    interface Presenter extends BaseContract.Presenter {
+    interface Presenter : BaseContract.Presenter {
  
     }
     

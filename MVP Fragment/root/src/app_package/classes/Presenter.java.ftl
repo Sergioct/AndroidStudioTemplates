@@ -1,8 +1,5 @@
 package ${packageName};
 
-import rx.Subscription;
-import rx.subscriptions.CompositeSubscription;
-
 /**
  *
  *  Developed by SergioCT
@@ -14,33 +11,12 @@ import rx.subscriptions.CompositeSubscription;
  *
  */
 
-public class ${presenterName} extends BasePresenter implements ${contractName}.Presenter{
-    
-    private Context mContext;
+class  ${presenterName}(
+    private val mView: ${contractName}.View
+) : BasePresenter {
 
-    // Vars
-    private ${contractName}.View mView;
-    private CompositeSubscription subscriptions;
-
-    @Inject
-    ${modelName} model;
-
-    @Inject
-    public ${presenterName}(Context context, ${contractName}.View view) {
-        this.mView = view;
-        this.mContext = context;
-        this.mView.setPresenter(this);
-        this.subscriptions = new CompositeSubscription();
-    }
-
-    @Override
-    public void start() {
+    init {
         
-    }
-
-    @Override
-    public void stop() {
-
     }
 
 }
