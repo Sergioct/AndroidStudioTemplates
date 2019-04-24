@@ -19,6 +19,5 @@ interface ${contractName}{
  
     interface Presenter : BaseContract.Presenter {
  
-    }
-    
+    }    
 }

@@ -11,7 +11,7 @@ package ${packageName};
  *
  */
 
-class  ${presenterName}(
+class  ${presenterName}: ${contractName}.Presenter (
     private val mView: ${contractName}.View
 ) : BasePresenter {
 

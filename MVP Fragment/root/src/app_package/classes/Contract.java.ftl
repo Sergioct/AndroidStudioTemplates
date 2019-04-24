@@ -16,9 +16,8 @@ interface ${contractName}{
     interface View : BaseContract.View {
  
     }
- 
+
     interface Presenter : BaseContract.Presenter {
  
-    }
-    
+    }    
 }

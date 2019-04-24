@@ -1,5 +1,11 @@
 package ${packageName};
-  
+
+import android.app.Application
+import androidx.appcompat.app.AppCompatDelegate
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
+
 /**
  *
  *	Developed by SergioCT
@@ -11,22 +17,10 @@ package ${packageName};
  *
  */
 
-public class ${appName}Application extends Application {
-
-    public static AppComponent appComponent;
-
-    private ApiControllerRetrofit apiControllerRetrofit;
-    private Picasso picasso;
-    //public static MyRoomDatabase db;
-
-    public static ${appName}Application get(Activity activity){
-        return (${appName}Application)activity.getApplication();
-    }
+public class ${appName}Application : Application() {
 
     override fun onCreate() {
         super.onCreate()
-
-        AppEventsLogger.activateApp(this)
 
         initKoin()
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
@@ -40,7 +34,9 @@ public class ${appName}Application extends Application {
             modules(
                 listOf(
                     appModule,
-                    managerModule
+                    managerModule,
+                    splashModule,
+                    mainModule
                 )
             )
         }
