@@ -20,10 +20,6 @@
 	    <instantiate from="src/app_package/classes/ui/base/BaseViewModel.kt.ftl"
 	    to="${escapeXmlAttribute(srcOut)}/ui/base/BaseViewModel.kt" />
 
-	    <instantiate from="src/app_package/classes/ui/base/NavigationActivity.kt.ftl"
-	    to="${escapeXmlAttribute(srcOut)}/ui/base/NavigationActivity.kt" />
-
-
 	<!-- di -->
 
 		<instantiate from="src/app_package/classes/di/ManagerModule.kt.ftl"
