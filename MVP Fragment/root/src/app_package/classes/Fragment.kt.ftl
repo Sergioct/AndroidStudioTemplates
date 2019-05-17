@@ -1,4 +1,11 @@
-package ${packageName};
+package ${packageName}
+
+import org.koin.android.ext.android.inject
+import org.koin.core.parameter.parametersOf
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 
 /**
  * Developed by Sergio Crespo Toubes
@@ -15,19 +22,23 @@ class ${fragmentName} : BaseFragment(), ${contractName}.View {
         fun newInstance() = ${fragmentName}
     }
 
-    private lateinit var viewModel: SecondMedicalOpinionListViewModel
     private val mPresenter: ${presenterName} by inject(parameterOf(this))
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater, 
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        super.onCreateView(inflater, container, savedInstanceState)
         return inflater.inflate(R.layout.${fragmentLayoutName}, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(${modelName}::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+		super.onViewCreated(view, savedInstanceState)
+        loadViews()
+    }
+
+    fun loadViews() {
+        
     }
 }
