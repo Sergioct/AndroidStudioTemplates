@@ -15,7 +15,7 @@
 
 #### Dependencies
   * MVP
-  * Dagger 2 
+  * Koin
   * Retrofit
   * JavaRx
 
@@ -23,46 +23,25 @@
 
 ```
 +-- di
-|   +-- components
-|       - AppComponent
-|   +-- modules
-|       - ActivityBindingModule // Not used, dagger-android class
-|       - ActivityModule
-|       - AppModule
-|       - FragmentModule
-|       - NetworkModule
-|       - PicassoModule
-|   +-- qualifier
-|       - ActivityContext
-|       - ApplicationContext
-|   +-- scopes
-|       - ActivityScoped
-|       - ApplicationScoped
-|       - FragmentScoped
-|       - UserScoped
-+-- network
-|   +-- pojo
-|       - Post
-|   - ApiControllerRetrofit
-+-- ui
-|   +-- main
-|       - MainActivity
-|       - MainComponent
-|       - MainContact
-|       - MainModel
+|   +-- presenters
 |       - MainModule
-|       - MainPresenter
-|   +-- root
+|       - SplashModule
+|   - ManagerModule
++-- ui
+|   +-- base
 |       - BaseActivity
+|       - BasePresenter
 |       - BaseContract
 |       - BaseFragment
+|       - BaseViewModel
 |   +-- splash
 |       - SplashActivity
-|       - SplashComponent
 |       - SplashContact
-|       - SplashModel
-|       - SplashModule
 |       - SplashPresenter
+|   +-- main
+|       - MainActivity
+|       - MainContact
+|       - MainPresenter
 - NameApplication
 ```
 
@@ -71,10 +50,7 @@
 ```
 +-- feature
 |   - FeatureActivity
-|   - FeatureComponent
 |   - FeatureContact
-|   - FeatureModel
-|   - FeatureModule
 |   - FeaturePresenter
 ```
 
@@ -83,10 +59,7 @@
 ```
 +-- feature
 |   - FeatureFragment
-|   - FeatureComponent
 |   - FeatureContact
-|   - FeatureModel
-|   - FeatureModule
 |   - FeaturePresenter
 ```
 

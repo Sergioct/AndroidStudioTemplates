@@ -11,6 +11,9 @@
 		<instantiate from="src/app_package/classes/ui/base/BaseActivity.kt.ftl"
 	    to="${escapeXmlAttribute(srcOut)}/ui/base/BaseActivity.kt" />
 
+		<instantiate from="src/app_package/classes/ui/base/BasePresenter.kt.ftl"
+	    to="${escapeXmlAttribute(srcOut)}/ui/base/BasePresenter.kt" />
+
 	    <instantiate from="src/app_package/classes/ui/base/BaseContract.kt.ftl"
 	    to="${escapeXmlAttribute(srcOut)}/ui/base/BaseContract.kt" />
 
